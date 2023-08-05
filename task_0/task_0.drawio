@@ -1,0 +1,231 @@
+<mxfile host="Electron" modified="2023-08-05T16:55:33.910Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.134 Electron/25.3.1 Safari/537.36" etag="F-Uw2Y3m0K2qy0ao9Ehv" version="21.6.5" type="device">
+  <diagram name="Page-1" id="UI03z8Lg2jb07q9TEsR_">
+    <mxGraphModel dx="1350" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-41" value="Accounter" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="430" width="570" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-2" value="&lt;h1&gt;Сервисы UberPopug Task Tracker&lt;/h1&gt;&lt;p&gt;Обоснование набора сервисов даёт по сути само ТЗ и его логика, у меня не нашлось аругментов еще как-то распиливать по-другому сервисы, поэтому я решил так и оставить. Исключение - авторизация:&lt;/p&gt;&lt;p&gt;1) таск-трекер&lt;/p&gt;&lt;p&gt;2) аккаунтер&lt;/p&gt;&lt;p&gt;3) аналитика.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;4) авторизацию решил вынести в отдельный сервис, потому что туда будут ходить все сервисы,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;и выглядит так как будто это отдельная штука которая должна хорошо решать одну задачу. Если бы все запросы в систему шли только через TaskTracker, то можно было бы сделать авторизацию как часть TaskTracker.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="20" width="470" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-66" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-3" target="pUyXkUnnda8Ql0HTjDDz-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-68" value="Зачисление/списание средств" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pUyXkUnnda8Ql0HTjDDz-66">
+          <mxGeometry x="0.186" y="-2" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-72" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;elbow=vertical;dashed=1;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-3" target="pUyXkUnnda8Ql0HTjDDz-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-73" value="Авторизация" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pUyXkUnnda8Ql0HTjDDz-72">
+          <mxGeometry x="0.1156" y="-7" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-3" value="Task tracker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="450" width="525" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-4" value="Accounter" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-5" value="Analitics" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="80" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-6" value="Auth" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1090" width="510" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-7" value="Админ&lt;br&gt;Менеджер&lt;br&gt;Начальник&lt;br&gt;Разраб" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="450" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-11" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.075;exitY=0.087;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-47" target="pUyXkUnnda8Ql0HTjDDz-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="510" as="sourcePoint" />
+            <mxPoint x="410" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-12" value="Создать задачу" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="490" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" target="pUyXkUnnda8Ql0HTjDDz-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="660" as="sourcePoint" />
+            <mxPoint x="400" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-17" value="Сделать реассайн" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="610" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-18" value="Task" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="458.75" y="460" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-19" value="+Описание&lt;br&gt;+Статус&lt;br&gt;+ID заассайненого попуга" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="pUyXkUnnda8Ql0HTjDDz-18">
+          <mxGeometry y="50" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-22" value="Хранилище задач" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="611.25" y="790" width="152.5" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-28" value="Админ&lt;br&gt;Менеджер" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="610" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-33" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-22" target="pUyXkUnnda8Ql0HTjDDz-3">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="686.97" y="790" as="sourcePoint" />
+            <mxPoint x="740" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-34" value="Админ" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1100" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-35" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.173;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-36" target="pUyXkUnnda8Ql0HTjDDz-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="1150" as="sourcePoint" />
+            <mxPoint x="460" y="1149.33" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-36" value="Создать аккаунт" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1115" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-37" value="Хранилище хешей клювов&lt;br&gt;и ID попугов" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="638.75" y="1410" width="152.5" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-38" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-37" target="pUyXkUnnda8Ql0HTjDDz-6">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="670.07" y="1300" as="sourcePoint" />
+            <mxPoint x="700" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-39" value="Task tracker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="80" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-40" value="Auth" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="160" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-42" value="Хранилище счетов" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="1398.75" y="770" width="152.5" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-43" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-42" target="pUyXkUnnda8Ql0HTjDDz-41">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="1500" y="790" as="sourcePoint" />
+            <mxPoint x="1410" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-44" value="Auth data" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1100" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-45" value="Map:&lt;br&gt;попуг ID:&amp;nbsp; hash" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="pUyXkUnnda8Ql0HTjDDz-44">
+          <mxGeometry y="50" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-46" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="538.75" as="sourcePoint" />
+            <mxPoint x="425" y="538.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-47" value="Задача выполнена" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="280" y="515" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-49" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="570" as="sourcePoint" />
+            <mxPoint x="425" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-50" value="Посмотреть дашборд" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="275" y="540" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-54" value="Account" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1228.75" y="445" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-55" value="+ ID попуга&lt;br&gt;+ Баланс счета общий&lt;br&gt;+ Баланс счета за день" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="pUyXkUnnda8Ql0HTjDDz-54">
+          <mxGeometry y="50" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-79" style="shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;dashed=1;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-56" target="pUyXkUnnda8Ql0HTjDDz-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-80" value="Авторизация" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" connectable="0" parent="pUyXkUnnda8Ql0HTjDDz-79">
+          <mxGeometry x="0.0055" y="5" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-98" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-56" target="pUyXkUnnda8Ql0HTjDDz-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-99" value="Дай балансы по счетам" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" connectable="0" parent="pUyXkUnnda8Ql0HTjDDz-98">
+          <mxGeometry x="-0.0111" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-56" value="Analitics&lt;br&gt;&lt;br&gt;Вычисление сколько заработали топы происходит по событиям зачислений" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1970" y="420" width="570" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-57" value="Хранилище отчетов по датам" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="2190" y="760" width="152.5" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-58" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" source="pUyXkUnnda8Ql0HTjDDz-57" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="2291.25" y="780" as="sourcePoint" />
+            <mxPoint x="2266.25" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-60" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-6" target="pUyXkUnnda8Ql0HTjDDz-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1330" y="970" as="sourcePoint" />
+            <mxPoint x="1380" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-61" value="Создать аккаунт" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pUyXkUnnda8Ql0HTjDDz-60">
+          <mxGeometry x="-0.0648" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-77" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;curved=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="pUyXkUnnda8Ql0HTjDDz-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1170" y="920" as="sourcePoint" />
+            <mxPoint x="900" y="1080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-78" value="Авторизация" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" connectable="0" parent="pUyXkUnnda8Ql0HTjDDz-77">
+          <mxGeometry x="0.0338" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-81" value="Админ" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="2700" y="460" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-82" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="pUyXkUnnda8Ql0HTjDDz-56">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2650" y="490" as="sourcePoint" />
+            <mxPoint x="1880" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-83" value="Посмотреть дашборд" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="2525" y="458" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-84" value="Админ&lt;br&gt;Бухгалтер" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="320" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-85" value="" style="endArrow=classic;html=1;rounded=0;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;shape=connector;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1470" y="360" as="sourcePoint" />
+            <mxPoint x="1590" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-86" value="Посмотреть дашборд" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" connectable="0" parent="pUyXkUnnda8Ql0HTjDDz-85">
+          <mxGeometry x="-0.0456" y="-2" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-87" value="Отчет за N-ую дату" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="450" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="pUyXkUnnda8Ql0HTjDDz-88" value="+ Сколько заработали топы&lt;br&gt;+ Самая дорогая задача&lt;br&gt;+ Сколько попугов в минусе" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="pUyXkUnnda8Ql0HTjDDz-87">
+          <mxGeometry y="50" width="180" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
