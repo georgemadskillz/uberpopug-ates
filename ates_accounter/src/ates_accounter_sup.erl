@@ -26,10 +26,16 @@ start_link() ->
 %%                  type => worker(),       % optional
 %%                  modules => modules()}   % optional
 init([]) ->
+    AtesAccounterSpec = #{
+        id => ates_auth,
+        start => {ates_accounter, start_link, []},
+        restart => permanent,
+        type => worker
+    },
     SupFlags = #{strategy => one_for_all,
                  intensity => 0,
                  period => 1},
     ChildSpecs = [],
-    {ok, {SupFlags, ChildSpecs}}.
+    {ok, {SupFlags, [AtesAccounterSpec]}}.
 
 %% internal functions
