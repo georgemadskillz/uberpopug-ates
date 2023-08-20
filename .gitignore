@@ -23,3 +23,4 @@ package_manager/*/pkg/*
 tags
 tmp*
 results
+*.dat
