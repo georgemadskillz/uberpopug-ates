@@ -15,7 +15,9 @@ handle_method(<<"POST">>, Req, State) ->
         {error, {match_query, {required, _Key}}} ->
             {ok, reply_html(400, Req), State};
         {error, bad_query} ->
-            {ok, reply_html(400, Req), State}
+            {ok, reply_html(400, Req), State};
+        {error, internal} ->
+            {ok, reply_html(500, Req), State}
     end;
 handle_method(_NotImpl, Req, State) ->
     {ok, reply_html(405, Req), State}.
@@ -23,7 +25,12 @@ handle_method(_NotImpl, Req, State) ->
 handle_request(Req) ->
     case parse_query(Req) of
         {ok, Params} ->
-            create_account(Params);
+            case ates_auth:create_account(Params) of
+                ok ->
+                 {ok, <<>>};
+                Error ->
+                    Error
+            end;
         Error ->
             Error
     end.
@@ -71,29 +78,6 @@ match_query(Constraints, Req) ->
             io:fwrite("Bad query params Error=~0p~n", [X]),
             {error, bad_query}
     end.
-
-create_account(#{popug_name := Name, popug_pass := Pass}) ->
-    io:fwrite("Creating account for popug Name=~0p Pass=~0p~n", [Name, Pass]),
-    Claims = [
-        %{popug_id, generate_uuid()},
-        {popug_name, Name}
-    ],
-    {ok, Token} = jwt:encode(<<"HS256">>, Claims, Pass),
-    true = dets:insert_new(auth_db, {Name, Token}),
-    EventData = {[
-        {event, <<"AuthAccountCreated">>},
-        {data, {[
-            {popug_name, Name}
-        ]}}
-    ]},
-    auth_events:produce(EventData),
-    io:fwrite("Created account for popug Name=~0p Token=~p~n", [Name, Token]),
-    {ok, <<>>}.
-
-%generate_uuid() ->
-%    UuidState = uuid:new(self()),
-%    {UUID, _} = uuid:get_v1(UuidState),
-%    uuid:uuid_to_string(UUID).
 
 reply_json(Code, JSON, Req) ->
     cowboy_req:reply(
