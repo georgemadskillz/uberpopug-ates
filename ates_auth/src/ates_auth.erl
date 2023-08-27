@@ -47,7 +47,7 @@ init([]) ->
     application:ensure_all_started(cowboy),
     io:fwrite("cowboy started..~n", []),
     Endpoints = [
-        {"/api/v1/account/", http_handler_account, []}
+        {"/api/v1/task/", http_handler_tasks, []}
     ],
     Dispatch = cowboy_router:compile([{'_', Endpoints}]),
     {ok, _} = cowboy:start_clear(
@@ -85,6 +85,7 @@ handle_call({create_account, Params}, _From, State) ->
     true = dets:insert_new(auth_db, {PopugID, Token}),
     io:fwrite("Generated auth data for popug Name=~0p Token=~p~n", [PopugName, Token]),
     EventData = #{
+        version => 1,
         popug_id => PopugID,
         popug_name =>PopugName
     },
